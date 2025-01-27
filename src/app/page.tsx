@@ -1,56 +1,87 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const resources = [
     {
       title: "Version Control",
-      description: "Learn Git and GitHub - essential tools for code collaboration and project management.",
-      icon: "📚",
+      description: "Because 'final_final_v3_REAL.py' isn't a sustainable naming convention. Learn Git and GitHub.",
+      icon: "🍁",
       link: "https://docs.github.com/en/get-started"
     },
     {
       title: "Web Development",
-      description: "Start building real web applications with HTML, CSS, and JavaScript fundamentals.",
+      description: "From 'How to center a div?' to 'How to center a div?' - Master the art of web development.",
       icon: "🌐",
       link: "https://developer.mozilla.org/en-US/docs/Learn"
     },
     {
       title: "Project Ideas",
-      description: "Practice your skills with beginner-friendly coding projects and tutorials.",
-      icon: "💡",
+      description: "Your 7th todo app isn't impressing anyone. Find unique project inspirations here.",
+      icon: "🔥",
       link: "https://www.freecodecamp.org/news/programming-projects-for-beginners/"
     },
     {
       title: "Best Practices",
-      description: "Learn software development best practices, clean code, and design patterns.",
+      description: "Learn to write code that won't make your fellow developers cry. Clean code and design patterns.",
       icon: "✨",
       link: "https://refactoring.guru/"
+    },
+    {
+      title: "System Design",
+      description: "'I swear it works on my machine'. Scale your applications.",
+      icon: "🌳",
+      link: "https://github.com/donnemartin/system-design-primer"
+    },
+    {
+      title: "Interview Prep",
+      description: "Go learn those red black trees, you'll definitely need them. Get ready!",
+      icon: "📚",
+      link: "https://leetcode.com"
+    },
+    {
+      title: "DevOps Basics",
+      description: "From 'it's alive!' to 'it's alive! (in production)'. Learn deployment and CI/CD.",
+      icon: "🚀",
+      link: "https://roadmap.sh/devops"
+    },
+    {
+      title: "Soft Skills",
+      description: "Yes, you need to interact with humans. Enhance your communication.",
+      icon: "🤝",
+      link: "https://www.coursera.org/articles/soft-skills"
     }
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+    <main className="min-h-screen techno-bg grid-background">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32 px-4">
-            <div className="pt-24">
-              <div className="text-center">
-                <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                  <span className="block">Half-Baked Dev</span>
-                  <span className="block text-indigo-400 mt-3">Theory to Practice</span>
-                </h1>
-                <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Bridge the gap between computer science theory and practical coding. Find curated resources, tutorials, and guides to help you become a well-rounded developer.
-                </p>
-                <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                  <div className="rounded-md shadow">
-                    <Link href="#resources" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              </div>
+      <div className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mt-10">
+            <div className="float-animation relative w-full max-w-2xl mx-auto">
+              <Image
+                src="/hero.gif"
+                alt="Hero Animation"
+                width={800}
+                height={400}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="card-glow-gradient-wrapper">
+              <p className="card-content max-w-3xl mx-auto text-base text-gray-300 sm:text-lg md:text-xl backdrop-blur-sm p-4 rounded-lg">
+                From "I know how to balance a binary tree" to "World-Class Developer" (or at least "Employable Developer" - let's be real here).
+                Find the resources you need to transform your theoretical knowledge into practical skills.
+              </p>
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Link 
+                href="#resources" 
+                className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 transform hover:scale-105 transition-all duration-200 card-glow"
+              >
+                &lt;learn /&gt;
+              </Link>
             </div>
           </div>
         </div>
@@ -59,12 +90,16 @@ export default function Home() {
       {/* Resources Grid */}
       <div id="resources" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            Learning Resources
+          <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 sm:text-4xl">
+            &lt;learning_resources /&gt;
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-300">
-            Curated resources to help you start coding with confidence
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-300 backdrop-blur-sm bg-gray-900/30 p-4 rounded-lg">
+            Because Stack Overflow copy-paste will only get you so far
           </p>
+        </div>
+        {/* Explorer */}
+        <div className='mt-12'>
+          
         </div>
         <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {resources.map((resource, index) => (
@@ -73,14 +108,17 @@ export default function Home() {
               href={resource.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col p-8 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200"
+              className="group flex flex-col p-8 bg-gray-900/50 backdrop-blur-sm rounded-lg hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 card-glow border border-orange-500/20"
             >
-              <div className="text-4xl mb-4">{resource.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-2">{resource.title}</h3>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-200 leaf-animation">{resource.icon}</div>
+              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 mb-2">{resource.title}</h3>
               <p className="text-gray-300 flex-grow">{resource.description}</p>
-              <div className="mt-4 text-indigo-400 font-semibold">Learn More →</div>
+              <div className="mt-4 text-orange-400 font-semibold group-hover:text-amber-400 transition-colors duration-200">
+                Learn More →
+              </div>
             </a>
           ))}
+
         </div>
       </div>
     </main>
