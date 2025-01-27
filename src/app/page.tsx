@@ -79,10 +79,11 @@ export default function Home() {
             </div>
             <div className="card-glow-gradient-wrapper mt-6 mx-4 sm:mx-0">
               <p className="card-content max-w-3xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 backdrop-blur-sm p-3 sm:p-4 rounded-lg">
-                From "I know how to balance a binary tree" to "World-Class
-                Developer" (or at least "Employable Developer" - let's be real
-                here). Find the resources you need to transform your theoretical
-                knowledge into practical skills.
+                From &quot;I know how to balance a binary tree&quot; to
+                &quot;World-Class Developer&quot; (or at least &quot;Employable
+                Developer&quot; - let&apos;s be real here). Find the resources
+                you need to transform your theoretical knowledge into practical
+                skills.
               </p>
             </div>
             <div className="mt-6 sm:mt-8 flex justify-center">
@@ -107,7 +108,7 @@ export default function Home() {
             &lt;learning_resources /&gt;
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-base sm:text-xl text-gray-300 p-3 sm:p-4 rounded-lg">
-            Because actually knowing what you're doing feels great
+            Because actually knowing what you&apos;re doing feels great
           </p>
         </div>
         {/* Explorer

@@ -50,6 +50,7 @@ export default function Node({ title, description, resourceUrl }: NodeProps) {
             {/* Body */}
             <div>
               <p>{description}</p>
+              <p>{resourceUrl}</p>
             </div>
           </div>
         )}
