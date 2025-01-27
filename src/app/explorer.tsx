@@ -43,7 +43,7 @@ export default function Explorer() {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">
           under construction
         </span>
-      </h1>
+      </h1> 
       {/* {nodes.map((node) => (
         <Node
           key={node.id}
@@ -52,6 +52,7 @@ export default function Explorer() {
           resourceUrl={node.resourceUrl}
         />
       ))} */}
+
     </div>
   );
 }

@@ -27,7 +27,7 @@ export default function RootLayout({
                   href="/"
                   className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 font-bold text-xl hover:scale-105 transition-transform"
                 >
-                  &lt;half-baked_dev /&gt;
+                  &lt;dev_not_found /&gt;
                 </Link>
               </div>
               <div className="hidden md:block">
