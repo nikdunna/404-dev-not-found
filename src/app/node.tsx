@@ -21,7 +21,7 @@ export default function Node({ title, description, resourceUrl }: NodeProps) {
       nodeRef={dragRef}
       defaultPosition={{ x: 0, y: 0 }}
       positionOffset={{ x: 0, y: 0 }}
-      scale={0.8}
+      scale={1}
       defaultClassName="draggable"
       bounds="parent"
     >
