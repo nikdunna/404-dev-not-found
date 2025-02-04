@@ -1,9 +1,6 @@
 "use client";
 
-import "./globals.css";
-// import { useState } from "react";
-import Node from "./node";
-import NodeDrawer from "./nodedrawer";
+import "../app/globals.css";
 
 export default function Explorer() {
   const nodes = [
@@ -39,16 +36,8 @@ export default function Explorer() {
 
   return (
     <div className="flex transform-gpu w-screen h-screen border border-amber-400 rounded-lg">
-      <NodeDrawer />
       <div className="flex transform-gpu relative items-center">
-        {nodes.map((node) => (
-          <Node
-            key={node.id}
-            title={node.title}
-            description={node.description}
-            resourceUrl={node.resourceUrl}
-          />
-        ))}
+       
       </div>
     </div>
   );

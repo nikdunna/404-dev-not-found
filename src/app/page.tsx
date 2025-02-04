@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Explorer from "./explorer";
+import Explorer from "../components/explorer";
 
 export default function Home() {
   const resources = [
