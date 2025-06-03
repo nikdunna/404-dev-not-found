@@ -2,7 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
-import Footer from "./footer";
+import Footer from "../components/footer";
 
 export const metadata = {
   title: "404 dev_not_found",

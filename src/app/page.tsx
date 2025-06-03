@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Explorer from "./explorer";
+import Explorer from "../components/explorer";
 
 export default function Home() {
   const resources = [
@@ -98,23 +98,30 @@ export default function Home() {
         </div>
       </div>
 
+
+      {/* Explorer (under construction spot) */}
+      <div className="mt-8 sm:mt-12 flex justify-center items-cente">
+        <Explorer />
+      </div>
+
+
+
+
+
       {/* Resources Grid */}
       <div
         id="resources"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
       >
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 sm:text-4xl">
+          <h2 className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 sm:text-4xl">
             &lt;learning_resources /&gt;
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-base sm:text-xl text-gray-300 p-3 sm:p-4 rounded-lg">
             Because actually knowing what you&apos;re doing feels great
           </p>
         </div>
-        {/* Explorer
-        <div className='mt-12 flex justify-center'>
-          <Explorer />
-        </div> */}
+      
         <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {resources.map((resource, index) => (
             <a
@@ -138,11 +145,6 @@ export default function Home() {
               </div>
             </a>
           ))}
-        </div>
-
-        {/* Explorer (under construction spot) */}
-        <div className="mt-8 sm:mt-12 flex justify-center">
-          <Explorer />
         </div>
       </div>
     </main>
